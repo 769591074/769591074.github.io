@@ -1,29 +1,31 @@
 <html>
   <head>
-  </head>
-
-  <script src="jquery-3.4.1.js"></script>
-  <script>
-    $(function(){
-      $.get("./data.json",function(result){
-        $("#myname").text(result.myname);
-        $("#myid").text(result.myid);
-      });
-    })
-      $("#com").click(function(){
-        $.get("./data1.json",function(result){
+      <script src="jquery-3.4.1.js"></script>
+      <script>
+        $(function(){
+          $.get("./data.json",function(result){
             $("#myname").text(result.myname);
             $("#myid").text(result.myid);
-        });
-      
-    })
-    
-  </script>
-  <style>
-    #logo{
-      border-radius: 10px 20px 30px 40px;
-    }
-  </style>
+          });
+        })
+          $("#com").click(function(){
+            $.get("./data1.json",function(result){
+                $("#myname").text(result.myname);
+                $("#myid").text(result.myid);
+            });
+          
+        })
+        
+      </script>
+      <style>
+          #logo{
+            border-radius: 10px 20px 30px 40px;
+          }
+        </style>
+  </head>
+  
+  
+  
   <body>
     <h2>我叫<span id="myname"></span></h2>
     <p>我的学号是<span id="myid"></span></p>
